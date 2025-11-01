@@ -1,0 +1,8 @@
+POST http://ip172-18-0-35-d3ihca469qi000ahv8b0-3000.direct.labs.play-with-docker.com:3000/api/register
+Content-Type: application/json
+
+{
+    "username": "testuser",
+    "password": "testpwd",
+    "email": "testuser@test.test"
+}

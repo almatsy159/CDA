@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li><a href="/">Home</a></li>
+    </ul>
+    <form id="add-user" method="post">
+    <!-- sans action utilise l'url courante-->
+        <div class="line">
+            <label for="username">username :</label>
+            <input id="username" name="username" type="text" value="{{user.name}}">
+            
+        </div>
+        <div class="line">
+            <label for="job">job :</label>
+            <input id="job" name="job" type="text" value="{{user.job}}">
+        </div>
+        <button type="submit">Valid</button>
+    </form>
+    @if (error)
+    <p>{{ error }}</p>
+    @end
+
+    @if (id)
+    <button id="delete">Delete</button>
+    <script> 
+    const delete_btn = document.getElementById("delete")
+    delete_btn.addEventListener('click',() => {
+        //fetch(`/users/{{id}}/delete`,{method:'get'})
+        fetch(`/users/{{id}}/delete`,{method:'GET'}).then(res=> res.ok ? window.location.href = "/" : null)
+    })
+    
+    </script>
+    @end
+
+    
+    
+</body>
+
+
+</html>
