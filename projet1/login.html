@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script defer src="login.js"></script>
+    <title>Document</title>
+</head>
+<body>
+        <form name="login">
+        <label for="user_id">User</label>
+        <input type="text" id="user_id" name="username" required/>
+        
+        <label for="user_pwd">Password</label>
+        <input type="password" id="user_pwd" name="password" required/>
+        
+        <input type="submit" value="Submit"/>
+        <input id="register" type="button" value="Register"/>
+
+        <div id="toast0" class="toast0">Identifiant validés en cours de connexion !</div>
+        <div id="toast1" class="toast1">Identifiant invalide!</div>
+
+        <p id="message"></p>
+
+        <!-- <button onclick="showToast()">Créer un compte</button> -->
+
+    </form>
+</body>
+</html>
